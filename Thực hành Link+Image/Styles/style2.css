@@ -1,0 +1,30 @@
+img{
+	width: 350px;
+	height: 420px;
+}
+
+.picture{
+	padding-left: 200px;
+	padding-top: 50px;
+	float: left;
+}
+.info{
+	padding-top: 100px;
+
+}
+
+.name2{
+	font-size: 18px;
+	color: #58595b;
+	font-weight: bold;
+}
+
+.price{
+	font-size: 24px;
+    font-weight: bold;
+    color: #d0021b;
+}
+
+a{
+	text-decoration: none;
+}

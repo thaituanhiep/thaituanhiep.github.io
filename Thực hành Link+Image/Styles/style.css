@@ -1,0 +1,33 @@
+img {
+	width: 180px;
+	height: 216px;
+	margin-top: 5px;
+}
+
+.box{
+	float: left;
+	border: 1px solid grey;
+}
+
+.name{
+	text-align: center;
+}
+
+body{
+	margin-top: 100px;
+	margin-right: 200px;
+	margin-left: 200px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.price {
+	color: #ff0000;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
