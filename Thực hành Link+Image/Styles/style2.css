@@ -1,15 +1,23 @@
+body{
+	width: 1000px;
+	margin:auto;
+}
+
 img{
-	width: 350px;
-	height: 420px;
+	max-width: 350px;
+	
+}
+
+.choose {
+	margin-top: 100px;
 }
 
 .picture{
-	padding-left: 200px;
-	padding-top: 50px;
 	float: left;
+	height: 420px;
 }
 .info{
-	padding-top: 100px;
+	padding-top: 50px;
 
 }
 
