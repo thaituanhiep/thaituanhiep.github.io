@@ -1,0 +1,121 @@
+html,body{margin: 0;padding: 0}
+*{box-sizing: border-box;overflow: hidden;}
+img{max-width: 100%;}
+
+body{
+	background-color: #C5EBDF;
+}
+
+@keyframes title{
+	10% {color: orange}
+    20% {color: red;}
+    100%{color: red;}
+}
+.header{
+	background-color: #000;
+
+}
+.main-menu {
+	float: left;
+	width: 100%;
+}
+.main-menu div{
+	width: 12%;
+	float: left;
+}
+.main-menu div a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1;
+}
+.main-menu div a:hover{
+	color: red;
+}
+#logo a{
+	font-weight: bold;
+	color: white;
+	font-size: 2em;
+	text-decoration: none;
+	animation: title 10s ease infinite;
+}
+#logo {
+	float: left;
+	width: 52%;
+	padding: 20px;
+}
+#choose{
+	padding-top: 30px;
+}
+
+
+
+
+
+.wrap{
+	margin: auto;
+	width: 80%;
+	position: relative;
+	height: 100%;
+}
+
+.col {
+	float: left;
+	width: 33.333333333%;
+	padding: 30px;
+}
+
+.thumb1, .thumb2 {
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+
+.thumb1 img, .thumb2 img {
+	vertical-align: middle;
+}
+
+.thumb1 {
+	padding: 4px;
+	transition: all 0.5s ease;
+}
+
+.thumb2 {
+	overflow: hidden;
+}
+
+.thumb2 img {
+	transition: all 0.5s linear;
+}
+
+.thumb1:hover{
+	transform: translate(0,-5px);
+	/*transform có thể di chuyển,xoay chiều,phóng to,bóp méo element*/
+	
+	/*thêm hiệu ứng đổ bóng lên khung ảnh*/
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.thumb2:hover img {
+	transform: scale(1.2);
+	opacity: 0.8;
+}
+
+
+
+@keyframes move{
+	0%{margin-right: -15%;opacity: 0}
+	20%{margin-right: 0%;opacity: 1;color: red}
+	70%{margin-right: 0%;opacity: 1;color: red}
+	100%{margin-right: 50%;opacity: 0;color: black}
+}
+
+.wrap p{
+	float: right;
+	position: absolute;
+	font-weight: bold;
+	font-size: 20px;
+	bottom: -17px;
+	right: 30px;
+	animation: move 5s ease infinite;
+	animation-delay: 3s;
+}
