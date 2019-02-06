@@ -1,0 +1,335 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#header{
+	width: 100%;
+	background-color: red;
+	border-bottom: 1px solid black;
+	overflow: hidden;
+}
+.info{
+	width: 66.666%;
+	margin: auto;
+}
+.info img{
+	float: left;
+	width: 10%;
+	border: 1px solid black;
+}
+.info ul{
+	width: 70%;
+	float: right;
+}
+#header ul li{
+	list-style-type: none;
+	float: left;
+	max-width: 120px;
+	width: 32%;
+	padding-top: 8%;
+	padding-bottom: 1%;
+}
+#header li ul{
+	list-style-type:none;
+	display: none;
+	position: absolute;
+}
+#header li ul li{
+	clear: both;
+	padding: 10px;
+	background-color: red;
+	border: 1px solid black;
+	height: 70%;
+}
+#header li:hover ul{
+	display: block;
+}
+#header a{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-family: Tahoma;
+}
+#header a:hover{
+	border-bottom: 2px solid white;
+}
+
+
+
+
+
+.banner img{
+	width: 100%;
+}
+.dathang {
+	width: 66.666%;
+	margin: auto;
+}
+.dathang a img {
+	width: 47.5%;
+	margin:1%;
+}
+
+
+
+
+
+.thucdon::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.thucdon{
+	width: 66.666%;
+	margin: auto;
+}
+.thucdon>div a{
+	text-decoration: none;
+	color: black;
+}
+.thucdon>div {
+	width: 33.333%;
+	float: left;
+	text-align: center;
+	padding: 1%;
+}
+.thucdon a:hover{
+	color: red;
+}
+.thucdon>div a div img{
+	width: 100%;
+	max-width: 350px;
+	max-height: 180px;
+	border-radius: 8px;
+}
+.thucdon>div a div{
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.thucdon>div a div img:hover{
+	transform: scale(1.2);
+	transition: transform 1.2s ease-in-out;
+}
+.thucdon>div a p{
+	font-size: 16px;
+	font-family: Tahoma;
+}
+
+
+
+
+
+.fanimg{
+	width: 66.666%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.fanimg img{
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+.contentfan{
+	width: 66.666%;
+	margin:auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.contentfan::after{
+	  content: "";
+  clear: both;
+  display: table;
+}
+.picfandom{
+	width: 50%;
+	float: left;
+}
+.picfandom img{
+	width: 100%;
+}
+.noidungfan{
+	width: 50%;
+	float: right;
+	font-family: Tahoma;
+	font-size: 17px;
+}
+.boxfan::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.boxfan {
+	width: 66.666%;
+	margin: auto;
+}
+.picfan{
+	width: 23%;
+	margin: 1%;
+	float: left;
+}
+.picfan img{
+	width: 100%;
+	border: 4px solid red;
+	border-radius: 6px;
+}
+
+
+
+
+
+#bottom{
+	width: 100%;
+	background-color: red;
+	margin-top: 80px;
+}
+#bottom::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.noidungbottom{
+	width: 66%;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.contentbot{
+	width: 50%;
+	float: left;
+}
+.company{
+	color: #fff;
+    font-weight: 100;
+    font-size: 19px;
+    font-family: Tahoma;
+}
+.infokfc{
+	color: #fff;
+	font-size: 14px;
+	font-family: Tahoma;
+	padding-bottom: 15px;
+}
+.bocongthuong{
+	width: 50%;
+	float: right;
+}
+.bocongthuong a{
+	margin: 50%;
+}
+
+
+
+
+
+.gioithieu1{
+	width: 66.666%;
+	margin:auto;
+	font-family: Tahoma;
+	margin-top: 50px;
+}
+.gioithieu1::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.noidunggt1{
+	font-size: 17px;
+	width: 50%;
+	float: left;
+}
+.anhgt1{
+	width: 50%;
+	float: right;
+}
+
+
+
+
+
+.diachikfc{
+	width: 66.666%;
+	margin: auto;
+}
+
+
+
+
+
+@media(max-width: 800px){
+	.dathang,.thucdon, .fanimg, .boxfan{
+		width: 100%;
+	}
+	.info{
+		width: 100%;
+	}
+	#bottom{
+		margin-top: 20px;
+	}
+	.noidungbottom{
+		width: 90%;
+	}
+	.contentbot{
+		width: 100%;
+	}
+	.bocongthuong{
+		float: left;
+	}
+	.bocongthuong a{
+		margin: 0;
+		padding-top: 10px;
+	}
+	.info ul{
+		float: right;
+	}
+	.info img{
+		width: 25%;
+	}
+	.gioithieu1{
+		width: 90%;
+	}
+	.noidunggt1{
+		width: 100%;
+	}
+	.anhgt1{
+		width: 100%;
+		clear: right;
+	}
+	.anhgt1 img{
+		margin-top: 30px;
+		width: 100%;
+	}
+	.contentfan{
+		width: 90%;
+	}
+	.picfandom{
+		width: 100%;
+	}
+	.noidungfan{
+		width: 100%;
+	}
+	.diachikfc{
+		width: 90%;
+	}
+	.diachikfc h1{
+		font-size: 23px;
+	}
+}
+
+@media(max-width: 475px){
+	.dathang a img{
+		width: 98%;
+	}
+}
+
+
+
+
+
+
+
+
+
