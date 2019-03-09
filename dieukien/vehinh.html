@@ -8,8 +8,8 @@
     <style>
         .name {
             float: left;
-            margin-right: 10px;
-            font-weight: bold
+            margin-right: 25px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -141,7 +141,7 @@
             let str = '';
             if (height >= 5 && height % 2 == 1) {
                 for (let i = 1; i <= height; i++) {
-                    for (let j = 1; j <= (height + 1) / 2; j++) {
+                    for (let j = 1; j <= (height - 1) / 2; j++) {
                         if (j == 1) {
                             str += ' * ';
                         } else {
@@ -162,10 +162,10 @@
             let str = '';
             for (let i = 1; i <= height; i++) {
                 for (let j = 1; j <= 3; j++) {
-                    if (j == 2) {
+                    if (j == 2 || i==1 || i==height) {
                         str += ' * ';
                     } else {
-                        str += ' ';
+                        str += '   ';
                     }
                 }
                 str += '\n';
@@ -176,8 +176,8 @@
         function writeP(height) {
             let str = '';
             for (let i = 1; i <= height; i++) {
-                for (let j = 1; j <= (height + 1) / 2; j++) {
-                    if (i == 1 || i == (height + 1) / 2 || j == 1 || (j == (height + 1) / 2 && i <= (height + 1) / 2)) {
+                for (let j = 1; j <= (height - 1) / 2; j++) {
+                    if (i == 1 || i == (height + 1) / 2 || j == 1 || (j == (height - 1) / 2 && i <= (height + 1) / 2)) {
                         str += ' * ';
                     } else {
                         str += '   ';
