@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .name {
+            float: left;
+            margin-right: 10px;
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+    </div>
+    <script>
+        //Bai 1
+        function printTrigangle(n) {
+            var str = '';
+            for (var i = 0; i < n; i++) {
+                for (var j = 0; j <= i; j++) {
+                    str += ' * ';
+                }
+                str += '<br/>';
+            }
+            document.getElementById("content").innerHTML = '<div class="name"><pre>' + str + '</pre></div>';
+        }
+
+        //Bai 2
+        function printEmptyRectangle(a, b) {
+            var str = '';
+            for (var i = 0; i < a; i++) {
+                str += ' * ';
+            }
+            str += '\n';
+            for (var i = 0; i < b - 2; i++) {
+                str += ' * ';
+                for (var j = 1; j <= a - 2; j++) {
+                    str += '   ';
+                }
+                str += ' * ';
+                str += '\n';
+            }
+            for (var i = 0; i < a; i++) {
+                str += ' * ';
+            }
+            document.getElementById("content").innerHTML = '<div class="name"><pre>' + str + '</pre></div>';
+        }
+
+
+
+        //Bài 3
+        function printSpecialTrigangle(n) {
+            var str = '';
+            var i = 2 * n - 1;
+            var j = 0;
+            while (i > 0) {
+                for (var wj = 0; wj < j; wj++) {
+                    str += '   ';
+                }
+                for (var wi = 1; wi <= i; wi++) {
+                    str += ' * ';
+                }
+                i -= 2;
+                j++;
+                str += "\n";
+            }
+            document.getElementById("content").innerHTML = '<div class="name"><pre>' + str + '</pre></div>';
+        }
+
+        //Bài 4
+        function printX(n) {
+            var str = '';
+            var m = n;
+            while (m > 0) {
+                for (var i = 1; i <= n; i++) {
+                    if (i == m || i == n + 1 - m) {
+                        str += ' * ';
+                        continue;
+                    }
+                    str += '   ';
+                }
+                str += "\n";
+                m--;
+            }
+            document.getElementById("content").innerHTML = '<div class="name"><pre>' + str + '</pre></div>';
+        }
+
+        //Bai 5
+        function printButterfly(n) {
+            var str = '';
+            var m = 1;
+            while (m <= n) {
+                for (var i = 1; i <= n; i++) {
+                    if (m <= (n + 1) / 2 && i > m && i < n + 1 - m) {
+                        str += '   ';
+                        continue;
+                    }
+                    if (m > (n + 1) / 2 && i < m && i > n + 1 - m) {
+                        str += '   ';
+                        continue;
+                    }
+                    str += ' * ';
+                }
+                str += '\n';
+                m++;
+            }
+            document.getElementById("content").innerHTML = '<div class="name"><pre>' + str + '</pre></div>';
+        }
+
+        function writeH(height) {
+            /* so le nhap vao la chieu cao
+                chieu ngang = (chieu cao +3)/2
+             */
+            let str = '';
+            if (height % 2 == 1) {
+                for (let i = 1; i <= height; i++) {
+                    for (let j = 1; j <= (height + 1) / 2; j++) {
+                        if (j == 1 || j == (height + 1) / 2) {
+                            str += ' * ';
+                        } else {
+                            if (i == (height + 1) / 2) {
+                                str += ' * ';
+                            } else {
+                                str += '   ';
+                            }
+                        }
+                    }
+                    str += '\n';
+                }
+            }
+            return str;
+        }
+
+        function writeE(height) {
+            let str = '';
+            if (height >= 5 && height % 2 == 1) {
+                for (let i = 1; i <= height; i++) {
+                    for (let j = 1; j <= (height + 1) / 2; j++) {
+                        if (j == 1) {
+                            str += ' * ';
+                        } else {
+                            if (i == 1 || i == height || i == (height + 1) / 2) {
+                                str += ' * ';
+                            } else {
+                                str += '   ';
+                            }
+                        }
+                    }
+                    str += '\n';
+                }
+            }
+            return str;
+        }
+
+        function writeI(height) {
+            let str = '';
+            for (let i = 1; i <= height; i++) {
+                for (let j = 1; j <= 3; j++) {
+                    if (j == 2) {
+                        str += ' * ';
+                    } else {
+                        str += ' ';
+                    }
+                }
+                str += '\n';
+            }
+            return str;
+        }
+
+        function writeP(height) {
+            let str = '';
+            for (let i = 1; i <= height; i++) {
+                for (let j = 1; j <= (height + 1) / 2; j++) {
+                    if (i == 1 || i == (height + 1) / 2 || j == 1 || (j == (height + 1) / 2 && i <= (height + 1) / 2)) {
+                        str += ' * ';
+                    } else {
+                        str += '   ';
+                    }
+                }
+                str += '\n';
+            }
+            return str;
+        }
+
+        function printMyName(height) {
+            if (height >= 5 && height % 2 == 1) {
+                let str = '';
+                str += '<div class="name"><pre>' + writeH(height) + '</pre></div>' +
+                    '<div class="name"><pre>' + writeI(height) + '</pre></div>' +
+                    '<div class="name"><pre>' + writeE(height) + '</pre></div>' +
+                    '<div class="name"><pre>' + writeP(height) + '</pre></div>';
+                document.getElementById("content").innerHTML = str;
+            } else {
+                document.getElementById("content").innerHTML = "<h1>Bạn phải nhập vào số nguyên lẻ và lớn hơn hoặc bằng 5</h1>";
+            }
+        }
+    </script>
+</body>
+
+</html>
